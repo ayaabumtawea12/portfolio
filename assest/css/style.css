@@ -1,0 +1,716 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&family=Raleway:ital,wght@0,100;0,300;0,400;0,600;0,700;1,100;1,200;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800&family=Josefin+Sans:wght@700&family=Raleway:ital,wght@0,100;0,300;0,400;0,600;0,700;1,100;1,200;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800&family=Josefin+Sans:wght@700&family=Raleway:ital,wght@0,100;0,300;0,400;0,600;0,700;1,100;1,200;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,500;1,700;1,900&display=swap');
+body{
+    font-family: 'robot', sans-serif;
+}
+
+.top{
+position: fixed;
+bottom: 10px;
+right: 10px;
+z-index: 9999;
+}
+
+.top i{
+    border-radius: 50%;
+    padding: 10px 12px;
+    background-color: #fc4715;
+}
+/*start loadingggggggggggggggggggggggg*/
+.loader {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    border: 3px solid;
+    border-color: #FF3D00 #FF3D00 transparent transparent;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+  }
+  .loader::after,
+  .loader::before {
+    content: '';  
+    box-sizing: border-box;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    border: 3px solid;
+    border-color: transparent transparent #FF3D00 #FF3D00;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    box-sizing: border-box;
+    animation: rotationBack 0.5s linear infinite;
+    transform-origin: center center;
+  }
+  .loader::before {
+    width: 32px;
+    height: 32px;
+    border-color: #FF3D00  #FF3D00  transparent transparent;
+    animation: rotation 1.5s linear infinite;
+  }
+      
+  @keyframes rotation {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  } 
+  @keyframes rotationBack {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(-360deg);
+    }
+  }
+
+  .loading{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+     
+    z-index: 99999;
+    background-color: white;
+    width: 100%;
+     }
+
+
+/*end loadingggggggggggggggggggggggggggg*/  
+
+
+
+
+
+ 
+.container{
+    width: 75%;
+}
+
+.nav-bg-color{
+    background-color: aliceblue;
+    box-shadow: 1px 2px 10px #282828;
+}
+
+
+
+.navbar .button{
+ background-color: #ff724c;
+ }
+
+.navbar .nav-link.active{
+    color: #313335;
+   font-size: 14px;
+ }
+
+ .navbar .nav-link:hover {
+    color: #282828;
+ }
+
+
+.navbar .nav-link{
+    color:  #818181;;
+    margin-left: 15px;
+    font-weight: 300;
+    position: relative;
+}
+
+.navbar .nav-link::after{
+    content: '';
+    position: absolute;
+    bottom:0;
+    left:0;
+    height: 2px;
+    width: 0;
+    transition: width 1s;
+    background-color: #ff724c;
+}
+
+.navbar .nav-link:hover::after{
+    width: 100%;
+}
+ 
+.navbar .nav-link.active::after{
+width:100%
+} 
+.button span{
+    font-size:14px;
+}
+
+.button i{
+    transition: 1s;
+}
+.button:hover i{
+background-color: #313335 !important;
+color: white !important;
+transform: rotate(360deg);
+}
+
+
+/*hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh*/
+ /*start header*/
+ header{
+background-image: url(../images/introbg5.png);
+background-size: cover;
+background-attachment: fixed;
+}
+
+.header-content span {
+    color:#313335;
+    font-size:23px;
+    font-weight: 500;
+    font-family: 'Raleway';
+ 
+  }
+
+ .header-content p {
+    color: #313335;
+    font-size: 23px;
+    font-weight: 500;
+    font-family: 'Raleway';
+    /*المهم*/
+    width: 0;
+    white-space: nowrap; /*مشان الاحرف ما ييجو تحت بعض*/
+    overflow: hidden;  /* مشان اي زيادة برا البوردر هاد يخفيه*/
+    margin-left: auto;
+    border-right: 1px solid;
+    animation: typing 3s both infinite alternate-reverse steps(28), blink 0.7s infinite ;/*both ع الجهتين روحة رجعة */
+ }
+
+ @keyframes typing{
+    from{
+        width: 0;
+    }
+
+    to{
+        width: 373px;/* لما عملت انسبكت جيت عرضه وهاد كان عرضها */
+    }
+ }
+
+ @keyframes blink{
+
+ from{
+       border-color: rgba(0, 0,0, 0);
+    }
+ to{
+        border-color: rgba(0, 0,0, 0.5);
+
+    }
+
+ }
+
+
+h1{
+    font-size:60px;
+    font-family: Dosis;
+}
+
+h2{
+    font-size: 50px;
+    font-family: 'Dosis', sans-serif;
+}
+ 
+.social .icon i{
+    border:2px solid #365999;
+    width: 30px;
+    height: 30px;
+    color: #365999;
+    text-align: center;
+    line-height: 30px;
+    transition:transform .5s,background-color .5s;
+    cursor: pointer;
+}
+
+.social .icon i:hover{
+    background-color:  #365999;
+    color: white;
+    transform: rotate(360deg);
+}
+
+.social .icon:nth-of-type(2) i{
+    border-color:#ea4c89;
+}
+
+.social .icon:nth-of-type(2) i:hover{
+    background-color:#ea4c89;
+    color:white;
+}
+
+.social .icon:nth-of-type(5) i{
+
+    border-color:#ea4c89 ;
+}
+
+.social .icon:nth-of-type(5) i:hover{
+    background-color: #ea4c89;
+    color: white;
+}
+
+/*about section*/
+
+.about .container > .row{
+width: 90%;
+margin: auto;
+}
+
+.about .about-content
+{
+    background-color: #4e4e4e;
+}
+
+
+.describtion{
+    background-color: #ff724c;
+}
+
+ 
+.eye-icon,.fa-envelope{
+    border-bottom-left-radius: 23px;
+    border-top-left-radius: 23px;
+    font-size: 14px;
+}
+
+.describtion a span{
+    font-size: 14px;
+    color:#4e4e4e;
+ }
+
+ .describtion a:hover i{
+    color: #ff724c !important;
+ }
+
+/*
+.section-about .title span:not(.about .title span){
+    background-color: #ff724c;
+ }
+ */
+
+ h3{
+    color: #3b3b3b;
+    font-size: 18px;
+ }
+/*serviceeeeeeeeeeeeeeeevvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv*/
+ .service-item p{
+    font-size: 13px;
+    color: #818181;
+}
+
+.title span{
+    position: absolute;
+    left:-10px;
+    top:-30px;
+    border-bottom: solid #ff724c 1px;
+}
+ 
+ .service-item{
+    position: relative;
+ }
+
+ .service-item::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 100%;
+    border-radius: 15px;
+    background-color:  #f3f3f3;
+    z-index: -1;
+    transition: 0.5s;
+ }
+
+ .service-item:hover::after {
+
+    bottom: 0;
+ }
+
+ /*portfolio*/
+.portfolio .nav-link{
+    font-size: 14px;
+    color: #3b3b3b;
+    font-family: 'Raleway';
+}
+ /*
+.portfolio .nav-link:hover{
+    border: none !important;
+}
+*/
+
+.portfolio .nav-link.active{
+
+    background-color: #ff724c;
+    color: white;
+}
+
+.portfolio .nav-link.active:hover{
+border-color: #ff724c;
+}
+
+.portfolio .nav-link{
+    padding: 5px 8px;
+    font-size: 13px;
+    margin-right: 15px;
+    border: 1px solid #5f5f5f;
+}
+
+/*
+.portfolio .nav-link:hover{
+    border-color: #5f5f5f;
+    ما في داعي
+}
+*/
+
+
+.portfolio{
+    background-color: #f3f3f3;
+}
+
+.overlay{
+position: absolute;
+left: 0;
+right: 0;
+top: 0;
+bottom: 0;
+background-color: rgba(0,0,0,.5);
+transform: scaleY(0);
+transition: 0.5s;
+}
+.overlay i{
+    color: white;
+    background-color: #ff724c;
+    padding: 12px;
+    font-size: 15px;
+    border-radius: 50%;
+    transition: 0.5s 0.2s;
+    transform: scale(0);
+}
+
+
+.portfolio-item:hover .overlay{
+    transform: scaleY(1);
+}
+
+.portfolio-item:hover .overlay i{
+
+transform: scale(1) rotate(360deg)  ;
+}
+
+.overlay i:hover{
+    background-color: transparent;
+    border: 1px solid white;
+    color: #ff724c;
+}
+
+.info{
+    position: absolute;
+    bottom: 30px;
+    width: 100%;
+    opacity: 0;
+    transition:   0.5s;
+}
+
+.portfolio-item:hover .info{
+    bottom: 0;
+    opacity: 1;
+}
+
+.info .desc p{
+    font-size: 14px;
+    color: #4c4c4c;
+}
+
+.info .h3{
+    font-size: 15px;
+}
+
+.info i{
+    color: #ff724c;
+}
+
+
+
+/*start  bio */
+.bio .head i{
+width: 35px;
+height: 35px;
+background-color: #ff724c;
+text-align: center;
+border-radius: 50%;
+line-height: 35px;
+color: #f3f3f3;
+}
+
+.bio .head:hover i{
+
+background-color: #f3f3f3;
+color:#ff724c;
+
+}
+
+
+h4, .item p{
+    font-size: 14px;
+    color: #3b3b3b;
+}
+
+.colouerd{
+
+    color: #ff724c;
+    font-size: 14px;
+}
+
+
+.head::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    left: 18px;
+    top: 2.2rem;
+    height: 100%;
+    width: 1px;
+    background-color: #313335;   
+}
+
+.bio-item .desc .item::after{
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    top: 1px;
+    left: -2px;
+    border-radius: 50%;
+    border: 1px solid #ff724c;
+    background-color: white;
+}
+
+.bio-item .desc .item:not(:last-of-type)::before{
+    content: '';
+    left: 2px;
+    top: 0;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    background-color: #313335;
+    width: 1px;
+}
+
+.bio-item .desc .item:hover::after{
+    background-color: #ff724c;
+}
+
+.bar {
+    background-color: #3b3b3b;
+    width: 100%;
+    height: 6px;
+    border-radius: 10px;
+    position: relative;
+}
+
+
+.bar::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 80%;
+    height: 6px;
+    background-color: #ff724c;
+ }
+
+ .item[val="70"] .bar::after{
+    width: 70%;
+ }
+ .item[val="55"] .bar::after{
+    width: 55%;
+ }
+
+
+ .item[val="80"] h4{
+    width: 80%;
+ }
+ .item[val="70"] h4{
+    width: 70%;
+ }
+ .item[val="55"] h4{
+    width: 55%;
+ }
+
+ 
+
+
+
+/*start resume*/
+
+.resume{
+    background-image:linear-gradient(rgba(59,59,59,0.75),rgba(59,59,59,.75)), url('../images/brandbg.png');
+    background-size: cover;
+}
+
+.resume p{
+    font-size: 32px;
+    font-family: 'Dosis','sans serif';
+    margin-bottom: 2rem;
+}
+
+.resume a.btn{
+    border: 3px solid white;
+    color: white;
+    font-size: 13px;
+}
+
+.resume a.btn:hover{
+    background-color: #ff724c;
+    border-color:#ff724c
+}
+
+/* start testimonials*/
+.testimonials h3{
+    color: #313131;
+    font-family:'Roboto',sans-serif;
+    font-size: 15px;
+}
+
+.qoute span{
+    color: #5b5b5b;
+    font-style: italic;
+    font-size: 13px;
+}
+
+
+.qoute:hover{
+    background-color: #5b5b5b;
+    color: #f3f3f3;
+}
+
+.qoute:hover span{
+    color: #f3f3f3;
+}
+
+.carousel-indicators{   /*  مشان النقاط للتننقل */
+    bottom: -25px;
+    margin-bottom: 0;
+}
+
+.carousel-indicators [data-bs-target]{
+    width: 10px;
+    height: 10px;
+    border:1px solid #ff724c;
+    border-radius: 50%;
+}
+
+.carousel-indicators .active{
+    background-color: #ff724c;
+}
+
+
+/* start contact*/
+.contact{
+    background-image:linear-gradient(rgba(255, 114, 76.6, 0.85),rgba(255, 114, 76.6, 0.85)), url('../images/contactbg.png');
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+
+.contact .title span{
+    border-bottom: .5px solid white;
+}
+
+
+.contact .container >p{
+font-size: 14px;
+width: 56%;
+margin: auto;
+font-weight: 300;
+}
+
+input:focus,textarea:focus{
+    box-shadow: none !important;
+    border:1px solid #ffffff !important;
+}
+
+::placeholder{
+    color: white !important;
+    text-transform: capitalize;
+    font-size: 13px;
+
+}
+
+.contact a span{
+    color: 313131;
+    font-size: 13px;
+}
+ 
+
+.contact .container a:hover i{
+    color: #ff724c !important;
+
+}
+
+/*start mappppppppppppppppppppppppppp*/
+.map .contact-info{
+    background-color: #282828;
+    color:white;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
+
+  .contact-info i{
+width: 30px;
+height: 30px;
+border-radius: 50%;
+text-align: center;
+line-height: 30px;
+background-color:white;
+color: #ff724c;
+transition: transform 1s;
+}
+
+.contact-info i:hover{
+    color: white;
+    background-color: #ff724c;
+    transform: rotate(360deg);
+}
+
+.contact-info h3{
+    font-size: 15px;
+}
+
+.contact-info a{
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+}
+/*fooooooooooooooooooooooooooooooooooooooooooooter*/
+.coloured{
+    color: #ff724c;
+}
+
+footer  .copy{
+    color: #818181;
+    font-size: 14px;
+    font-family: 'Raleway','sans serif';
+}
+
+
+footer p{
+    margin: 0;
+}
+
+footer p:last-of-type{
+    text-align: right;
+    font-size: 14px;
+    font-family: 'Raleway','sans serif';
+    font-weight: 400;
+}
